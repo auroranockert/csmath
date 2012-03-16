@@ -1,0 +1,1 @@
+CSMath.abs = Math.abs
