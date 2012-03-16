@@ -53,7 +53,10 @@ end
 void function (global) {
 	"use strict";
 
-	var CSMath = {}	
+	var CSMath = {}
+
+	<%= file 'accurate.js' %>
+
 	<%= file 'abs.js' %>
 	<%= file 'constants.js' %>
 	<%= file 'exp.js' %>
@@ -65,6 +68,6 @@ void function (global) {
 	<%= file 'sign.js' %>
 	<%= file 'sqrt.js' %>
 	<%= file 'trigonometric.js' %>
-	
+
 	global.CSMath = CSMath
 }(this || global)
