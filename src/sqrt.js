@@ -1,7 +1,18 @@
 if (CSMath.accurate['sqrt']) {
 	CSMath.sqrt = Math.sqrt
 } else {
-	/* Algorithm from 'Divide, Square Root and Remainder Algorithms for the IA64 Architecture */
+	/*
+	 * Algorithm from 'Divide, Square Root and Remainder Algorithms for the IA64
+	 * Architecture' by Intel
+	 *
+	 *  - It is proven correct under a few assumptions
+	 *      1. That Math.sqrt is at least as accurate as the IA64 approximation
+	 *         instruction.
+	 *      2. That we're using the IA64 extended floating point format. (Which
+	 *         we are not)
+	 *  - I haven't checked if this algorithm actually works in double-precision,
+	 *    but my intuition says that it should be fine.
+	 */
 	
 	var sqrtApproximation = Math.sqrt
 	
