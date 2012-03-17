@@ -51,4 +51,4 @@ CSMath.hypot2 = function() {
 CSMath.min = Math.min
 CSMath.max = Math.max
 
-CSMath.hypot = norm2
+CSMath.hypot = CSMath.norm2
